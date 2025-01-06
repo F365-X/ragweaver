@@ -1,0 +1,76 @@
+**/.ragignore
+**/.vscode/**
+.DS_Store
+# Git
+.git/**
+.github/**
+.gitattributes
+.gitpod.yml
+.gitignore
+
+.markdownlint.json
+.markdownlintignore
+
+.coderabbit.yml
+.mergify.yml
+sonar-project.properties
+
+# Common
+*.env*
+*/bin/*
+**/CHANGELOG.md
+**/changelog.md
+**/RELEASE_PROCESS.md
+**/RELEASES.md
+**/ROADMAP.md
+**/Makefile
+**/README.md
+**/CONTRIBUTING.md
+**/CODE_OF_CONDUCT.md
+**/license
+**/LICENSE
+
+# Indivisual
+**/*.whl
+**/*.tar
+**/*.tar.gz
+**/*.tar.bz2
+**/*.png
+**/*.jpeg
+**/*.jpg
+**/*.mk
+**/*.pdf
+**/**.log
+
+# c 
+.clang-format
+**/testdata/**
+**/stdout
+
+# Frontend
+**/swagger-ui/**
+**/node_modules/**
+**/lazy-lock.json
+**/bun.lockb
+
+
+# Go
+**/.go.work.example
+**/*pb.go
+**/.goreleaser.yml
+**/.golangci.yml
+**/go.mod
+**/go.sum
+
+# Docker
+**/Dockerfile/**
+**/docker-compose.yml
+**/.dockerignore
+
+
+# Python
+__pycache__/**
+.mypy_cache/**
+.tox/**
+**/*.pyc
+
