@@ -22,6 +22,11 @@ builds:
       - linux
       - windows
       - darwin
+brews:
+  - repository:
+      owner: f365-x # Homebrew Taps 用のリポジトリのオーナー名
+      name: homebrew-tap # Homebrew Taps 用のリポジトリ名
+      token: "{{ .Env.TAP_GITHUB_TOKEN }}"
 
 archives:
   - format: tar.gz
