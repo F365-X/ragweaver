@@ -1,3 +1,5 @@
+# ragweaver
+
 ## **目次**
 
 - 目的 (Japanese)
@@ -11,7 +13,7 @@
 
 ## **目的 (Japanese)**
 
-Ragweaver は、ローカルにクローン済みの Git リポジトリやディレクトリ内のファイルをテキストとして書き出し、RAG の埋め込みをサポートするツールです。
+ragweaver は、ローカルにクローン済みの Git リポジトリやディレクトリ内のファイルをテキストとして書き出し、RAG の埋め込みをサポートするツールです。
 
 - 無視(除外)したいファイルやフォルダを定義できます。(.ragignoreに定義)
 - コメント(\#)などを含むBash 互換のパターンマッチ(\*\*)をサポートしています。
@@ -19,7 +21,7 @@ Ragweaver は、ローカルにクローン済みの Git リポジトリやデ�
 ## **使い方 (Japanese)**
 
 1. ローカルに対象の Git リポジトリをクローンする。 (リモートの URL だけを指定しても動作しません。すでにクローンしたローカルディレクトリに対してのみ実行できます。)
-2. preamble.txtにRAGに埋め込みたい文字列を定義することができます。 指定がない場合、デフォルトでRagweaverは下記のプレアンブルを出力します。  
+2. preamble.txtにRAGに埋め込みたい文字列を定義することができます。 指定がない場合、デフォルトでragweaverは下記のプレアンブルを出力します。  
    `This text file represents the contents of a Git repository. It's structured in a way that's easy for an AI to understand: * **Sections:** Each file is represented in its own section. * **Separators:** Each section starts with a line of four hyphens (`----`). * **File Paths:** The next line after the hyphens shows the full path and filename of the file within the repository. * **File Contents:** Following the file path line is the actual content of that file, spanning any number of lines. **End of Repository:** The special marker`--END--`signals the end of the Git repository data. **Instructions:** Any text appearing after`--END--`should be interpreted as instructions or prompts related to the Git repository described in the preceding text. **Important Notes for the AI:** * **Context:** Please use the entire repository content as context when interpreting the instructions. * **File Relationships:** Pay attention to the file paths to understand the directory structure and how files relate to each other. * **Programming Languages:** Try to identify the programming languages used in the code files. This will help you understand the code's purpose and behavior. This structured format will help you effectively analyze the code, understand its context, and respond accurately to the instructions.`
 
 3. .ragignore ファイルを用意する (任意) 例:  
@@ -42,7 +44,7 @@ Ragweaver は、ローカルにクローン済みの Git リポジトリやデ�
 
 ## **.ragignore について (Japanese)**
 
-Ragweaver は、指定されたリポジトリ内のファイルを処理する際に、.ragignore ファイルに記述されたルールに従ってファイルを無視します。 .ragignore ファイルは、以下のルールに従って処理されます。
+ragweaver は、指定されたリポジトリ内のファイルを処理する際に、.ragignore ファイルに記述されたルールに従ってファイルを無視します。 .ragignore ファイルは、以下のルールに従って処理されます。
 
 - 各行は1つのパターンを表します。
 - \#で始まる行はコメントとして扱われ、無視されます。
@@ -82,7 +84,7 @@ Bash
 
 ## **Purpose (English)**
 
-Ragweaver is a command-line tool designed to prepare your local Git repositories or directories for use with Retrieval Augmented Generation (RAG) systems. It achieves this by traversing the file structure and outputting the contents as a single text file, optimized for embedding in a vector database.  
+ragweaver is a command-line tool designed to prepare your local Git repositories or directories for use with Retrieval Augmented Generation (RAG) systems. It achieves this by traversing the file structure and outputting the contents as a single text file, optimized for embedding in a vector database.  
 Key features include:
 
 - **.ragignore Support:** Define files and folders to be excluded from processing, similar to .gitignore. Supports comments (\#) and Bash-compatible glob patterns (including \*\*).
@@ -91,7 +93,7 @@ Key features include:
 ## **Usage (English)**
 
 1. Clone the target Git repository locally. (Specifying only the remote URL will not work. You can only run it against an already cloned local directory.)  
-   You can define the string you want to embed in RAG in preamble.txt. If not specified, Ragweaver outputs the following preamble by default.
+   You can define the string you want to embed in RAG in preamble.txt. If not specified, ragweaver outputs the following preamble by default.
    `This text file represents the contents of a Git repository. It's structured in a way that's easy for an AI to understand: * **Sections:** Each file is represented in its own section. * **Separators:** Each section starts with a line of four hyphens (`----`). * **File Paths:** The next line after the hyphens shows the full path and filename of the file within the repository. * **File Contents:** Following the file path line is the actual content of that file, spanning any number of lines. **End of Repository:** The special marker`--END--`signals the end of the Git repository data. **Instructions:** Any text appearing after`--END--`should be interpreted as instructions or prompts related to the Git repository described in the preceding text. **Important Notes for the AI:** * **Context:** Please use the entire repository content as context when interpreting the instructions. * **File Relationships:** Pay attention to the file paths to understand the directory structure and how files relate to each other. * **Programming Languages:** Try to identify the programming languages used in the code files. This will help you understand the code's purpose and behavior. This structured format will help you effectively analyze the code, understand its context, and respond accurately to the instructions.`
 
 2. **(Optional) Create a .ragignore File:** Specify files or folders to exclude. For example:  
@@ -111,7 +113,7 @@ Key features include:
 
 ## **About .ragignore (English)**
 
-Ragweaver uses .ragignore files to determine which files and directories should be ignored during processing. Here's how it works:
+ragweaver uses .ragignore files to determine which files and directories should be ignored during processing. Here's how it works:
 
 - **Pattern Matching:** Each line in the .ragignore file represents a single pattern.
 - **Comments:** Lines starting with \# are treated as comments and ignored.
