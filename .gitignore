@@ -1,6 +1,6 @@
 # General
+dist/
 .DS_Store
-.ragignore
 .AppleDouble
 .LSOverride
 lazy-lock.json
@@ -31,3 +31,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 bun.lockb
+# Added by goreleaser init:
+dist/
